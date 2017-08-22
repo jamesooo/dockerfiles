@@ -1,4 +1,4 @@
-FROM jonealcmd/laravel:latest
+FROM cmdagency/laravel:latest
 
 # install mongo extension
 RUN apk add --no-cache \
