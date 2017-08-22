@@ -43,3 +43,27 @@ function dpush(){
     docker push $DOCKER_REG_DIR/"${PWD##*/}"
   fi
 }
+
+function builddev(){
+  if [ ! -f ./Dockerfile.dev ]; then
+    echo "Dockerfile.dev not found in your current directory"
+  else
+    docker build -t "${PWD##*/}":dev -f Dockerfile.dev .
+  fi
+}
+
+function dtagdev(){
+  if [ ! -f ./Dockerfile ]; then
+    echo "Dockerfile.dev not found in your current directory"
+  else
+    docker tag "${PWD##*/}":dev $DOCKER_REG_DIR/"${PWD##*/}":dev
+  fi
+}
+
+function dpushdev(){
+  if [ ! -f ./Dockerfile ]; then
+    echo "Dockerfile.dev not found in your current directory"
+  else
+    docker push $DOCKER_REG_DIR/"${PWD##*/}":dev
+  fi
+}
