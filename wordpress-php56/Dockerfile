@@ -1,40 +1,16 @@
-FROM php:5.6-fpm-alpine
+FROM jonealcmd/wordpress-php56
 RUN apk add --no-cache \
   autoconf \
   gcc \
   make \
-  openssl-dev \
-  libpng-dev \
-  libxml2-dev \
   alpine-sdk \
-  gettext-dev \
-  pcre-dev \
-  libxslt-dev \
-&& docker-php-ext-install \
-  gd \
-  mysql \
-  mysqli \
-  opcache \
-  zip \
-  calendar \
-  exif \
-  gettext \
-  pcntl \
-  shmop \
-  sockets \
-  sysvmsg \
-  sysvsem \
-  sysvshm \
-  xsl \
-  wddx \
-  pdo_mysql \
+&& pecl install xdebug \
+&& docker-php-ext-enable xdebug \
 && apk del \
   autoconf \
   gcc \
   make \
-  openssl-dev \
-  alpine-sdk \
-  libxml2-dev
+  alpine-sdk
 
 ENTRYPOINT ["docker-php-entrypoint"]
 EXPOSE 9000
