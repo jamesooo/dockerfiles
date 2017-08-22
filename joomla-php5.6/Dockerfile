@@ -1,4 +1,4 @@
-FROM jonealcmd/joomla-php5.6
+FROM cmdagency/joomla-php5.6
 RUN apk add --no-cache \
   autoconf \
   gcc \

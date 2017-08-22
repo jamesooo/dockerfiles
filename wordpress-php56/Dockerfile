@@ -1,4 +1,4 @@
-FROM jonealcmd/wordpress-php56
+FROM cmdagency/wordpress-php56
 RUN apk add --no-cache \
   autoconf \
   gcc \

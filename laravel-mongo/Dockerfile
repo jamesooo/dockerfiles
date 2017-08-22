@@ -1,4 +1,4 @@
-FROM jonealcmd/laravel
+FROM cmdagency/laravel
 RUN apk add --no-cache \
   autoconf \
   gcc \
