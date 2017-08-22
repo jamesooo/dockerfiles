@@ -1,4 +1,4 @@
-FROM jonealcmd/laravel-mongo
+FROM jonealcmd/laravel
 RUN apk add --no-cache \
   autoconf \
   gcc \
