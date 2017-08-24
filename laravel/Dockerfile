@@ -4,6 +4,7 @@ RUN apk add --no-cache \
   gcc \
   make \
   alpine-sdk \
+  ssmtp \
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
 && apk del \
