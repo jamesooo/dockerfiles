@@ -1,0 +1,19 @@
+FROM cmdagency/wordpress-php71
+RUN apk add --no-cache \
+  autoconf \
+  gcc \
+  make \
+  alpine-sdk \
+  ssmtp \
+&& pecl install xdebug \
+&& docker-php-ext-enable xdebug \
+&& apk del \
+  autoconf \
+  gcc \
+  make \
+  alpine-sdk
+
+ENTRYPOINT ["docker-php-entrypoint"]
+EXPOSE 9000
+
+CMD ["php-fpm"]
