@@ -10,7 +10,10 @@ RUN apk add --no-cache \
   gettext-dev \
   pcre-dev \
   libxslt-dev \
-  libjpeg \
+  libjpeg-turbo-dev \
+  libpng-dev \
+&& docker-php-ext-configure gd \
+  --with-jpeg-dir=/usr/include/ \
 && docker-php-ext-install \
   gd \
   mysql \
