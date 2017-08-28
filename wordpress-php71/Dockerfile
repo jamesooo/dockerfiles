@@ -16,7 +16,6 @@ RUN apk add --no-cache \
   --with-jpeg-dir=/usr/include/ \
 && docker-php-ext-install \
   gd \
-  mysql \
   mysqli \
   opcache \
   zip \
