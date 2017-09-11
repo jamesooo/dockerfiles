@@ -6,6 +6,3 @@ do
     "/certs/${HOST}.key" -out "/certs/${HOST}.crt" -extensions \
     v3_ca
 done
-if [ "$DHPARAM" = "yes" ]
-  openssl dhparam -out /certs/dhparam.pem 4096
-fi
