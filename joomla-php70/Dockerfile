@@ -17,6 +17,7 @@ RUN apt-get update -y \
   php7.0-readline \
   php7.0-soap \
   php7.0-xml \
+  curl \
 && rm -rf /var/lib/apt/lists/*
 
 COPY php-fpm.d/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
