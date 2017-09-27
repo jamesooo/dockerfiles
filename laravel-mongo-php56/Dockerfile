@@ -23,4 +23,4 @@ ENTRYPOINT ["docker-php-entrypoint"]
 WORKDIR /var/www/html
 EXPOSE 9000
 
-CMD ["php-fpm"]
+CMD ["php5-fpm"]
