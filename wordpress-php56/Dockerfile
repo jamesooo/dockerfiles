@@ -23,4 +23,4 @@ COPY php-fpm.d/zz-docker.conf /etc/php5/fpm/zz-docker.conf
 ENTRYPOINT ["docker-php-entrypoint"]
 EXPOSE 9000
 
-CMD ["php-fpm"]
+CMD ["php5-fpm"]

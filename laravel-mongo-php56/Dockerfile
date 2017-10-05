@@ -13,6 +13,7 @@ RUN apt-get update -y \
   php5-json \
   php5-mcrypt \
   php5-mongo \
+  php5-memcached \
 && rm -rf /var/lib/apt/lists/*
 
 COPY php-fpm.d/php-fpm.conf /etc/php5/fpm/php-fpm.conf

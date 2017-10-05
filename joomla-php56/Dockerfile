@@ -15,6 +15,7 @@ RUN apt-get update -y \
   php5-mysql \
   php5-readline \
   php5-imagick \
+  php5-apcu \
 && rm -rf /var/lib/apt/lists/* \
 && php5enmod mcrypt
 
