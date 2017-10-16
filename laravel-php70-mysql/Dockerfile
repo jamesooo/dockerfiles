@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
 COPY docker-php-entrypoint /usr/bin/docker-php-entrypoint
 
