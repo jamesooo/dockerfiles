@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:trusty
 
 COPY docker-php-entrypoint /usr/bin/docker-php-entrypoint
 
@@ -13,12 +13,6 @@ RUN apt-get update -y \
   php7.0-json \
   php7.0-mcrypt \
   php7.0-mysql \
-  php7.0-opcache \
-  php7.0-readline \
-  php7.0-soap \
-  php7.0-xml \
-  curl \
-  zip \
 && rm -rf /var/lib/apt/lists/*
 
 COPY php-fpm.d/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
