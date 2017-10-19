@@ -19,7 +19,10 @@ RUN apt-get update \
   php7.1-readline \
   php7.1-xml \
   php7.1-zip \
-&& rm -rf /var/lib/apt/lists/*
+  pkg-config \
+&& rm -rf /var/lib/apt/lists/* \
+&& pecl install mongodb \
+&& echo "extension=mongodb.so" >> /etc/php/7.1/fpm/php.ini
 
 COPY php-fpm.d/php-fpm.conf /etc/php/7.1/fpm/php-fpm.conf
 COPY php-fpm.d/docker.conf /etc/php/7.1/fpm/docker.conf
