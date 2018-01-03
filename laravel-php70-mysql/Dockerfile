@@ -13,6 +13,7 @@ RUN apt-get update -y \
   php7.0-json \
   php7.0-mcrypt \
   php7.0-mysql \
+  php7.0-mbstring \
 && rm -rf /var/lib/apt/lists/*
 
 COPY php-fpm.d/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
